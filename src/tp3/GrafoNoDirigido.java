@@ -18,17 +18,6 @@ public class GrafoNoDirigido extends Grafo {
 		
 	}
 
-	@Override
-	public void addVertice(String etiqueta) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void addVertice(int peso, String etiqueta) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void deleteVertice(String etiqueta) {
@@ -60,6 +49,20 @@ public class GrafoNoDirigido extends Grafo {
 	public int pathSize(Vertice u, Vertice v) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+
+	@Override
+	public void addAdyacente(int u, int v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public Vertice getElemByEtiqueta(int u) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
