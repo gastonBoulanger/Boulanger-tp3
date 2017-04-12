@@ -8,7 +8,7 @@ public class Vertice {
 	private boolean terminado = false;
 	private int grado;
 	private ArrayList<Vertice> adyacentes = new ArrayList<Vertice>();
-	
+
 	public int getGrado() {
 		return grado;
 	}
@@ -32,22 +32,25 @@ public class Vertice {
 	public void incrementGrado() {
 		this.grado++;
 	}
+
 	public void decrementGrado() {
 		this.grado--;
 	}
-	
-	public void addAdyacente(Vertice v){
+
+	public void addAdyacente(Vertice v) {
 		this.adyacentes.add(v);
+		grado++;
 	}
 
-	public Vertice(int etiqueta){
+	public Vertice(int etiqueta) {
 		this.etiqueta = etiqueta;
 	}
-	
+
 	public ArrayList<Vertice> getAdyacentes() {
 		ArrayList<Vertice> copia = (ArrayList<Vertice>) adyacentes.clone();
 		return copia;
 	}
+
 	public int getEtiqueta() {
 		return etiqueta;
 	}
@@ -55,11 +58,11 @@ public class Vertice {
 	public void setEtiqueta(int etiqueta) {
 		this.etiqueta = etiqueta;
 	}
-	
-	public void printAdyacentes (){
-		System.out.println ("Vertices adyacentes a " + this.getEtiqueta() + ": ");
+
+	public void printAdyacentes() {
+		System.out.println("Vertices adyacentes a " + this.getEtiqueta() + ": ");
 		System.out.print("[ ");
-		for (int i=0; i<this.getAdyacentes().size();i++){
+		for (int i = 0; i < this.getAdyacentes().size(); i++) {
 			System.out.print(this.getAdyacentes().get(i).getEtiqueta() + " ");
 		}
 		System.out.println(" ]");
