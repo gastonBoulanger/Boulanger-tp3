@@ -6,7 +6,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		GrafoDirigido grafito = new GrafoDirigido();
+	/*	GrafoDirigido grafito = new GrafoDirigido();
 		GrafoDirigido grafote = new GrafoDirigido();
 
 		for (int i = 1; i < 11; i++) {
@@ -71,5 +71,27 @@ public class Main {
 		grafote.addAdyacente(31, 17);
 		grafote.addAdyacente(17, 18);
 		grafote.DFS(17);
+	*/
+		GrafoDirigido grafo = new GrafoDirigido();
+		grafo.addVertice(3);
+		grafo.addVertice(5);
+		grafo.addVertice(6);
+		grafo.addVertice(7);
+		grafo.printVertices(grafo);
+		grafo.addAdyacente(6 ,3);
+		grafo.addAdyacente(7 ,5);
+		grafo.addAdyacente(7 ,6);
+		grafo.addAdyacente(3 ,5);
+		grafo.addAdyacente(3 ,7);
+		
+		for (int i=0; i<grafo.vertices.size(); i++){
+			System.out.println("Adyacentes del Vértice " + grafo.vertices.get(i).getEtiqueta() + ": ");
+			grafo.vertices.get(i).printAdyacentes();
+		}
+		System.out.println("Hay " + grafo.getCiclos() + " ciclos.");
+		grafo.DFS();
+		System.out.println("Hay " + grafo.getCiclos() + " ciclos.");
+		
+	
 	}
 }

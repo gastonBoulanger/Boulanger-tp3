@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Vertice {
 	private int etiqueta;
-	private String visitado = "no";
+	private boolean visitado = false;
+	private boolean terminado = false;
 	private int grado;
 	private ArrayList<Vertice> adyacentes = new ArrayList<Vertice>();
 	
@@ -12,11 +13,19 @@ public class Vertice {
 		return grado;
 	}
 
-	public String isVisitado() {
+	public boolean isVisitado() {
 		return visitado;
 	}
 
-	public void setVisitado(String visitado) {
+	public boolean isTerminado() {
+		return terminado;
+	}
+
+	public void setTerminado(boolean terminado) {
+		this.terminado = terminado;
+	}
+
+	public void setVisitado(boolean visitado) {
 		this.visitado = visitado;
 	}
 
@@ -47,4 +56,12 @@ public class Vertice {
 		this.etiqueta = etiqueta;
 	}
 	
+	public void printAdyacentes (){
+		System.out.println ("Vertices adyacentes a " + this.getEtiqueta() + ": ");
+		System.out.print("[ ");
+		for (int i=0; i<this.getAdyacentes().size();i++){
+			System.out.print(this.getAdyacentes().get(i).getEtiqueta() + " ");
+		}
+		System.out.println(" ]");
+	}
 }
