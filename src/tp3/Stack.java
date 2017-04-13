@@ -3,7 +3,7 @@ package tp3;
 import java.util.ArrayList;
 
 
-public class Pila {
+public class Stack {
 	ArrayList<Vertice> lista = new ArrayList<Vertice>();
 
 	

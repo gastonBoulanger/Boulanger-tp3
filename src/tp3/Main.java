@@ -5,7 +5,7 @@ package tp3;
 public class Main {
 
 	public static void main(String[] args) {
-		GrafoDirigido grafo = new GrafoDirigido();
+		DirectedGraph grafo = new DirectedGraph();
 		final int SIZE = 1000;
 		for(int i=1; i<SIZE; i++){
 			grafo.addVertice(i);
@@ -20,9 +20,13 @@ public class Main {
 
 		
 		System.out.println("Hay ciclos (metodo DFS recursivo: " + grafo.dfs());
-		System.out.println("Hay ciclos (metodo DFS iterativo: " + grafo.dfsIterativo());
+		System.out.println("Hay ciclos (metodo DFS iterativo: " + grafo.dfsIterative());
 
-		
+	/*La busqueda de ciclos en grafos de gran tamaño utilizando el DFS recursivo
+	 * implica un mayor uso y la posibilidad de que alcance su tope de
+	 * memoria. Al contrario la cantidad de memoria del metodo iterativo es menor
+	 * ya que utiliza una lista finita de llamadas.
+	 */
 	
 	}
 }
